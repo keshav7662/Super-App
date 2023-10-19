@@ -1,9 +1,8 @@
+import RegisterPage from './pages/RegisterPage';
 function App() {
   return (
     <>
-      <div className="wrapper">
-        Hello from React!
-      </div>
+      <RegisterPage />
     </>
   );
 }

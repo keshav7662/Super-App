@@ -1,0 +1,21 @@
+.image-container{
+    min-height: 100vh;
+    position: relative;
+    background-image: url(../../assets/home-bg.png);
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.image-container p {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140.688%; 
+    letter-spacing: 1.1px;
+    position: absolute;
+    bottom: 2.5rem;
+    padding: 0 2.3rem;
+}
