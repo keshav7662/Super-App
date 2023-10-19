@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SignUpForm.css'
+import { useNavigate } from 'react-router-dom';
 function SignUpForm() {
     const [formData, setFormData] = useState({
         name: '',
@@ -14,10 +15,9 @@ function SignUpForm() {
         mobile: '',
         checkbox: ''
     });
-
+    const navigate = useNavigate();
     const [commonError, setCommonError] = useState('');
     const [checkboxChecked, setCheckboxChecked] = useState(false);
-
     function validation() {
         const { name, email, userName, mobile } = formData;
 
@@ -104,15 +104,9 @@ function SignUpForm() {
         e.preventDefault();
         const { name, email, userName, mobile } = formData;
         if (validation()) {
-            const data = {
-                name,
-                email,
-                userName,
-                mobile,
-            };
-
-            localStorage.setItem('formData', JSON.stringify(data));
+            localStorage.setItem('formData', JSON.stringify(formData));
             resetForm();
+            navigate('/genre');
         }
     }
 
