@@ -1,12 +1,13 @@
 import React from 'react'
 import './Banner.css'
+import bannerImg from '../../assets/home-bg.png'
 const Banner = () => {
   return (
-    <div>
+    <>
       <div className="image-container">
-            <p> Discover new things on Superapp</p>
-        </div>
-    </div>
+        <p> Discover new things on Superapp</p>
+      </div>
+    </>
   )
 }
 

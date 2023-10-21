@@ -1,6 +1,6 @@
-.image-container{
-    min-height: 100vh;
+.image-container{ 
     position: relative;
+    height : 100vh;
     background-image: url(../../assets/home-bg.png);
     overflow: hidden;
     background-size: cover;
@@ -19,3 +19,9 @@
     bottom: 2.5rem;
     padding: 0 2.3rem;
 }
+@media screen and (min-width: 1600px){
+    .image-container p {
+      font-size: 5.2rem; 
+    }
+  }
+  
