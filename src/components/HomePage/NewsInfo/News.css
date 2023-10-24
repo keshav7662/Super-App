@@ -1,0 +1,53 @@
+.news-card{
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    width: 30vw;
+}
+.news-image {
+    height: 65%;
+    position: relative;
+}
+.news-image img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+.news-data{
+    height: 35%;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    color: #272727;
+    text-align: justify;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 5% 10%;
+    font-size: 0.8rem;
+}
+.caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.74);
+    color: white; 
+    height: 35%;
+    width: 100%;
+    padding: 0 7%;
+  }
+  .caption h2 {
+    
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
+  .caption p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2.5%;
+  }

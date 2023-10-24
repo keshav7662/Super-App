@@ -9,7 +9,7 @@ const Weather = () => {
   useEffect(() => {
     const getWeatherData = async () => {
       try {
-        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=2852eebb350344bfb93125217232310&q=Motihari')
+        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=2852eebb350344bfb93125217232310&q=New%20Delhi')
         const data = await response.json();
         setWeatherData(data);
       } catch (err) {
@@ -45,6 +45,7 @@ const Weather = () => {
       <div className="weather-card">
         <div className="date-time">
           <p>{currentDateTime && currentDateTime.date}</p>
+          <p>{weatherData?weatherData.location.name:null}</p>
           <p>{currentDateTime && currentDateTime.time}</p>
         </div>
         <div className="weather-data">
