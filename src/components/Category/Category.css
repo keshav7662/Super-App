@@ -3,13 +3,11 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
 }
 .genre-category {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
+    margin-right: 5%;
+    height: 92%;
 }
 .show-category {
     flex: 1;
@@ -20,10 +18,11 @@
 .select-category{
     display: flex;
     flex-wrap:wrap;
-    gap: 1.5rem 1.5rem;
+    align-items: center;
+    gap: 1rem;
     justify-content: center;
     flex:1;
-    
+    margin-top: 2%;
 }
 .title-caption {
     display: flex;
@@ -46,7 +45,6 @@
     font-weight: 700;
     font-size:3rem;
     line-height: 141%;
-    
 }
 .chosen-category{
     width: 50%;
@@ -71,12 +69,11 @@
     font-family: 'Roboto';
     font-weight: 400;
 }
-
 .next-button {
     display: flex;
     justify-content: flex-end;
-    margin-right: 5rem;
-    
+    width: 95vw;
+    margin-top: 1%;
 }
 .next-button button {
     border-style: none;
@@ -90,4 +87,5 @@
     font-weight: 500;
     line-height: 92.2%; 
     letter-spacing: 0.526px;
+    margin-right: 5%;
 }

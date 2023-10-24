@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Roboto:wght@400;500;700&family=Single+Day&display=swap');
+.user-card{
+    background-color: #5746EA;
+    height: 47vh;
+    border-radius: 2.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
+.user-image {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 6%;
+}
+.user-image img {
+    height: 90%;
+}
+.user-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.user-data> p{
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+    letter-spacing: 0.1rem;
+    line-height: 160%;
+}
+.user-data > h1 {
+    color: #fff;
+    font-family: 'Roboto';
+}
+.selected-genre-block {
+    width: 80%;
+    margin-top: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 13vh;
+    overflow-y: auto;
+    gap: 0.5rem;
+}
+
+.selected-genre {
+    background-color: #9F94FF;
+    display: flex;
+    gap: 0.8rem;
+    width: 40%;
+    padding: 0.4rem 2rem;
+    border-radius: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.selected-genre p {
+    color: #fff;
+    font-size: 1rem ;
+    font-family: 'Roboto';
+    font-weight: 400;
+}

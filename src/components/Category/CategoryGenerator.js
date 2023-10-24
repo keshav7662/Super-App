@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './CategoryGenerator.css'
 function CategoryGenerator({ title, image, backgroundColor, onClick,isSelected }) {
-  const [radius, setRadis] = useState(false)
+  const [radius, setRadius] = useState(false)
   const handleClick = () => {
     if (onClick) {
-      setRadis(!radius);
+      setRadius(!radius);
       onClick(title);
     }
   };

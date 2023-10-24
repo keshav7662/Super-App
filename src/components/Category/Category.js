@@ -45,7 +45,7 @@ function SelectCategory() {
     }else {
       setError(false);
       localStorage.setItem('genreChoice',JSON.stringify(categories));
-      navigate('/home');
+      navigate('/browse');
     }
   }
   return (
@@ -58,7 +58,6 @@ function SelectCategory() {
               <p >Choose your entertainment category</p>
             </div>
             <div className="chosen-category">
-
             {
               categories.map((item) => (
                 <div className="chosen-block">
@@ -69,11 +68,12 @@ function SelectCategory() {
               </div>
               ))
             }
-            { error ? <p style={{color:'red'}}>
+            { 
+              error ? <p style={{color:'red'}}>
               <span ><img src={Emergency} alt="Reuired-symbol"
                style={{height:'1rem',width:'1rem',marginTop:'5%'}} />
-              </span> Minimum three categories required!</p>:null }
-           
+              </span> Minimum three categories required!</p>:null 
+            } 
             </div>
           </div>
 
