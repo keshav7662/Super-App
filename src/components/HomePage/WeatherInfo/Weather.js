@@ -45,7 +45,6 @@ const Weather = () => {
       <div className="weather-card">
         <div className="date-time">
           <p>{currentDateTime && currentDateTime.date}</p>
-          <p>{weatherData?weatherData.location.name:null}</p>
           <p>{currentDateTime && currentDateTime.time}</p>
         </div>
         <div className="weather-data">
@@ -54,26 +53,26 @@ const Weather = () => {
             <>
               {/* <---------------------1---------------> */}
               <div className="weather-info">
-                <img src={weatherData.current.condition.icon} alt="" />
-                <p style={{ color: '#fff',fontSize:'2rem' }}>{weatherData.current.condition.text}</p>
+                <img src={weatherData.current.condition.icon} alt="" style={{height:'50%'}} />
+                <p >{weatherData.current.condition.text}</p>
               </div>
               {/* <---------------------2---------------> */}
-              <div className="weather-info" style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <h2 style={{ color: '#fff', fontSize: '3rem' }}>{weatherData.current.temp_c}&deg;C</h2>
-                <div className="pressure" style={{ display: 'flex', gap: '0.8rem' }}>
-                  <img src={pressureBar} alt="" />
-                  <p style={{ color: '#fff', maxWidth: '50%' }}>{weatherData.current.pressure_mb} mbar Pressure</p>
+              <div className="weather-info">
+                <h1 >{weatherData.current.temp_c}&deg;C</h1>
+                <div className="pressure" style={{width:'80%',height:'50%',display:'flex',alignItems:'center',gap:'0.5rem'}}>
+                  <img src={pressureBar} alt="" style={{height:'50%'}} />
+                  <p>{weatherData.current.pressure_mb} mbar Pressure</p>
                 </div>
               </div>
               {/* <---------------------3---------------> */}
               <div className="weather-info">
-                <div style={{ display: 'flex',  gap: '0.8rem' }}>
-                  <img src={windSpeed} alt="" />
-                  <p style={{ color:'#fff',maxWidth: '50%' }}>{weatherData.current.wind_kph} km/h Wind</p>
+                <div style={{width:'80%',height:'50%',display:'flex',gap:'0.5rem'}}>
+                  <img src={windSpeed} alt="" style={{height:'50%'}} />
+                  <p>{weatherData.current.wind_kph} km/h Wind</p>
                 </div>
-                <div style={{ display: 'flex', gap: '0.8rem' }}>
-                  <img src={Humidity} alt="" />
-                  <p style={{ color:'#fff',maxWidth: '50%' }}>{weatherData.current.humidity}% humidity</p>
+                <div style={{width:'80%',height:'50%',display:'flex',gap:'0.5rem',alignItems:'center'}}>
+                  <img src={Humidity} alt="" style={{height:'50%'}} />
+                  <p>{weatherData.current.humidity}% humidity</p>
                 </div>
 
               </div>

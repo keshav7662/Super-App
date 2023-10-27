@@ -1,0 +1,56 @@
+.timer-card p{
+    margin:7%;
+}
+.timer-card{
+    width: 65vw;
+    height: 30vh;
+    background-color: #1E2343;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+.timer-circle {
+    background-color: #191E39;
+    border-radius: 50%;
+    box-shadow: 0px 6px 26px 0px rgba(3, 0, 13, 61) inset, -3px -7px 16px 0px rgba(199, 190, 190, 0.23);
+    margin: auto 2rem;
+}
+.controller {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.set-timer-block{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+.timer-controller{
+    color: #fff;
+    text-align: center;
+    width: 20%;
+    /* display: flex;
+    flex-direction: column; */
+}
+.start-btn{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.start-btn button {
+    height: 100%;
+    width: 100%;   
+     border-radius: 1.5rem;
+    background-color: #FF6A6A;
+    border: none;
+    padding: 0.3rem ;
+    font-size: 1.2rem;
+    color:#fff;
+    letter-spacing: 1.25px;
+}

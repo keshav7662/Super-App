@@ -1,29 +1,58 @@
 *{
     font-family: 'Roboto';
 }
-.weather-card{
-    border-radius: 2.1rem;
+.weather-card p,h1 {
+    margin: 0;
+}
+.weather-card {
+    height: 25vh;
+    width: 35vw;
+    background-color: green;
+    border-radius: 1rem;
     overflow: hidden;
-    /* height: 45%; */
 }
 .date-time {
     height: 30%;
+    width: 100%;
     background-color: #FF4ADE;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-}
-.weather-data {
-    height: 70%;
-    background-color: #101744;
-    display: flex;
-    align-items: center;
     justify-content: space-around;
 }
+.date-time p{
+    padding:2% 5%;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight:600;
+}
+.weather-data{
+    color: #fff;
+    height: 70%;
+    width: 100%;
+    background-color: #101744;
+    display: flex ;
+}
 .weather-info{
+    padding-top:2%;
+    height: 100%;
+    flex: 1;
+    background-color: #101744;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    position: relative;
+}
+
+.weather-info::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 0;
+    width: 1px;
+    height: 40%;
+    background-color: #fff; 
+}
+/* Style adjustments for the first weather-info div to remove the vertical line */
+.weather-info:first-child::before {
+    display: none;
 }

@@ -38,7 +38,7 @@ function SignUpForm() {
             errorMessage.name = '*name length should be greater than 3!';
             errorFound = true;
         }
-        else if (name[0] != name[0].toUpperCase()) {
+        else if (name[0] !== name[0].toUpperCase()) {
             errorMessage.name = '*first letter of name should be in Uppercase!';
             errorFound = true;
         }

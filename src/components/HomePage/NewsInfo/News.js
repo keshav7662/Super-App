@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './News.css'
-import NewsImage from '../../../assets/newsImage.png'
 const News = () => {
   const [newsData, setNewsData] = useState(null);
   const [currentDateTime, setCurrentDateTime] = useState(null);
   useEffect(() => {
     const getNews = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/everything?q=tesla&from=2023-09-24&sortBy=publishedAt&apiKey=dd8c6954472c47efa56abdd33bdc1329');
+        const response = await fetch('https://newsapi.org/v2/everything?q=tesla&from=2023-09-27&sortBy=publishedAt&apiKey=dd8c6954472c47efa56abdd33bdc1329');
         const data = await response.json();
         setNewsData(data.articles[0]);
       } catch (err) {

@@ -11,9 +11,11 @@ const UserCard = () => {
           <img src={UserImage} alt="" />
         </div>
         <div className="user-data">
+          <div className="user-details">
           <p className="name">{formData.name}</p>
           <p className="email">{formData.email}</p>
-          <h1 className="username">{formData.userName}</h1>
+          <h2 className="username">{formData.userName}</h2>
+          </div>
           <div className="selected-genre-block">
           {
             genreChoice.map((genreName,index) => (
