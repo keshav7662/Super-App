@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import Up from '../../../assets/up.svg'
 import Down from '../../../assets/down.png'
+import audioFile from '../../../assets/music.mp3'
 import './Timer.css'
 const Timer = () => {
   const [hours, setHours] = useState(0);
@@ -9,7 +10,7 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [startStopBtn, setStartStopBtn] = useState('start');
-
+  const audio = new Audio(audioFile)
   const updateHour = (action) => {
     if (action === 'increase') {
       setHours((hours) => hours + 1);
@@ -45,12 +46,20 @@ const Timer = () => {
       setHours(0);
       setMinutes(0);
       setSeconds(0);
+      audio.pause();
     }
   }
+  useEffect(() => {
+    if (isPlaying) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }, [isPlaying])
   const convertSeconds = (remainingSecond) => {
-    const hh = String(Math.max(0,Math.floor(remainingSecond / 3600))).padStart(2, '0');
-    const mm = String(Math.max(0,Math.floor((remainingSecond % 3600) / 60))).padStart(2, '0');
-    const ss = String(Math.max(0,remainingSecond % 60)).padStart(2, '0');
+    const hh = String(Math.max(0, Math.floor(remainingSecond / 3600))).padStart(2, '0');
+    const mm = String(Math.max(0, Math.floor((remainingSecond % 3600) / 60))).padStart(2, '0');
+    const ss = String(Math.max(0, remainingSecond % 60)).padStart(2, '0');
     return `${hh}:${mm}:${ss}`;
   }
   return (
@@ -64,7 +73,8 @@ const Timer = () => {
             size={150}
             colors={'#FF6A6A'}
           >
-            {({ remainingTime }) => <p style={{ color: '#fff',fontSize:'1.5rem' }}>{convertSeconds(remainingTime)}</p>}
+            {({ remainingTime }) => <p style={{ color: '#fff', fontSize: '1.5rem' }}>{convertSeconds(remainingTime)}</p>}
+
           </CountdownCircleTimer>
         </div>
         <div className="controller">

@@ -1,0 +1,43 @@
+.wrapper p {
+    color: #fff;
+}
+#navbar {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    margin-top: 2%;
+    align-items: center;
+}
+#navbar > h2 {
+    color: #72DB73;
+    font-family: Single Day;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.688%; 
+}
+#navbar img {
+    height: 4rem;
+}
+.hero {
+    margin: 1% 7%;
+}
+.genre-card {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.genre-card h3 {
+   color: #878787
+}
+.movie-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.movie-cards img {
+    width: 240px;
+    height: 120px;
+}

@@ -6,7 +6,7 @@ import NotesCard from '../components/HomePage/NotesCard/Notes'
 import TimerCard from '../components/HomePage/TimerCard/Timer'
 const Browse = () => {
   return (
-    <div style={{ margin: '2% 3%' }}>
+    <div style={{ margin: '2% 2%' }}>
       <div style={{ display: 'flex', gap: '2%' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3%' }}>
           <div style={{ display: 'flex', gap: '3%' }}>

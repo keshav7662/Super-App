@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SignUpForm.css'
 import { useNavigate } from 'react-router-dom';
 function SignUpForm() {
@@ -18,6 +18,13 @@ function SignUpForm() {
     const navigate = useNavigate();
     const [commonError, setCommonError] = useState('');
     const [checkboxChecked, setCheckboxChecked] = useState(false);
+    useEffect(()=>{
+        const existingUser = localStorage.getItem('formData');
+        if(existingUser){
+            navigate('/browse');
+        }
+    },[])
+    
     function validation() {
         const { name, email, userName, mobile } = formData;
 

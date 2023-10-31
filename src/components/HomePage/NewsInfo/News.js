@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './News.css'
+
 const News = () => {
   const [newsData, setNewsData] = useState(null);
   const [currentDateTime, setCurrentDateTime] = useState(null);
+  const navigate = useNavigate();
+
   useEffect(() => {
     const getNews = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/everything?q=tesla&from=2023-09-27&sortBy=publishedAt&apiKey=dd8c6954472c47efa56abdd33bdc1329');
+        const response = await fetch('https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=7a034166604beee6e5b8174ef2401a1b');
         const data = await response.json();
         setNewsData(data.articles[0]);
       } catch (err) {
@@ -36,6 +40,9 @@ const News = () => {
     getNews();
     updateDateTime();
   }, [])
+  const browseButtonHandler = () => {
+    navigate('/entertainment')
+  }
   return (
     <>
       <div className="news-card">
@@ -43,7 +50,7 @@ const News = () => {
           {
             newsData ?
               <>
-                <img src={newsData.urlToImage} alt="" />
+                <img src={newsData.image} alt="" />
                 <div className="caption">
                   <h2>{newsData.title}</h2>
                   <p>{currentDateTime.date} | {currentDateTime.time}</p>
@@ -63,7 +70,11 @@ const News = () => {
               : <>Loading....</>
           }
         </div>
+        
       </div>
+      <div className="browse-btn">
+          <button onClick={browseButtonHandler}>Browse</button>
+        </div>
     </>
   )
 }
